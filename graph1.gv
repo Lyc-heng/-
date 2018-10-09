@@ -1,0 +1,25 @@
+digraph recode{
+node [shape=record];
+"0x400260"[label="0x400260 |{parameter|1} |{temporary |int0}"];
+"0x4002b0"[label="0x4002b0 |{parameter|2} |{temporary |c0}"];
+"0x4002e0"[label="0x4002e0 |{parameter|2} |{temporary |}"];
+"0x400300"[label="0x400300 |{parameter|} |{temporary |{int0|int1|c0|int2|c1|int3}}"];
+"Golbal_Variable"[label="Golbal_Variable |{parameter|{int0:5|char0:a}}"]
+
+"0x400260" -> "MessageBoxA(0,FirstFunction,title,0,)" ;
+"0x4002b0" -> "0x400260" ;
+"0x4002b0" -> "MessageBoxA(0,SecondFunction,title,0,)" ;
+"0x4002e0" -> "0x400464" ;
+"0x4002e0" -> "0x400464" ;
+"0x400300" -> "0x4002b0" ;
+"0x400300" -> "0x4002e0" ;
+"0x400300" -> "MessageBoxA(0,b = 5,title,0,)" ;
+"0x400300" -> "MessageBoxA(0,b = 5,title,0,)" ;
+"0x400300" -> "MessageBoxA(0,a = 4,title,0,)" ;
+"0x400300" -> "MessageBoxA(0,a = 5,title,0,)" ;
+"0x400300" -> "MessageBoxA(0,a = 5,title,0,)" ;
+"0x400300" -> "MessageBoxA(0,a = 5,title,0,)" ;
+"0x400300" -> "MessageBoxA(0,a = 5,title,0,)" ;
+"0x400300" -> "ExitProcess" ;
+
+}
